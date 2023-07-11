@@ -1,1 +1,4 @@
-export const listingScreen = 'listingScreen';
+export const navigationConstants = {
+    listingScreen: 'listingScreen',
+    homeScreen: 'homeScreen',
+}

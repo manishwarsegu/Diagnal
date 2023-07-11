@@ -1,19 +1,17 @@
-import {Button, StatusBar, StyleSheet, View} from 'react-native';
-import {listingScreen} from '../../utils/constants';
-import { colors } from '../../utils/color';
+import {Button, StyleSheet, View} from 'react-native';
+import { navigationConstants } from '../../utils/constants';
+import {colors} from '../../utils/color';
+import StatusBarComponent from '../../components/StatusBarComponent/StatusBarComponent';
 
 function HomeScreen({navigation}): JSX.Element {
   console.log('mani', navigation);
   return (
     <>
-      <StatusBar 
-        backgroundColor={colors.black}
-        animated={true}
-      />
+      <StatusBarComponent />
       <View style={styles.container}>
         <Button
           title="Goto Listing Screen"
-          onPress={() => navigation.navigate(listingScreen)}
+          onPress={() => navigation.navigate(navigationConstants.listingScreen)}
         />
       </View>
     </>
@@ -25,7 +23,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black',
+    backgroundColor: colors.black,
   },
 });
 
